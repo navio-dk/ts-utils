@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.4.0](https://github.com/navio-dk/ts-utils/compare/v1.3.0...v1.4.0) (2025-10-13)
+
+
+### Features
+
+* update references from Nomad-Solutions to navio-dk in configuration files and changelog ([082187f](https://github.com/navio-dk/ts-utils/commit/082187f05aaf56681675675f69a9e1b9cfc0be4d))
+
 ## [1.3.0](https://github.com/navio-dk/ts-utils/compare/v1.2.0...v1.3.0) (2025-03-30)
 
 
