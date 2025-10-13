@@ -1,5 +1,5 @@
 {
-  "name": "@nomad-solutions/ts-utils",
+  "name": "@navio-dk/ts-utils",
   "version": "1.3.0",
   "type": "module",
   "scripts": {
@@ -19,10 +19,10 @@
     "type-fest": "^4.30.0"
   },
   "devDependencies": {
-    "@nomad-solutions/dev-env": "github:Nomad-Solutions/dev-env#v3.0.0-7"
+    "@navio-dk/dev-env": "github:navio-dk/dev-env#v3.1.0"
   },
   "trustedDependencies": [
-    "@nomad-solutions/dev-env",
+    "@navio-dk/dev-env",
     "esbuild",
     "husky"
   ]

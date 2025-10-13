@@ -10,7 +10,7 @@ Add this repository as a dependency in your `package.json`:
 // package.json
 {
 	"devDependencies": {
-		"@nomad-solutions/ts-utils": "github:Nomad-Solutions/ts-utils#v{version}"
+		"@navio-dk/ts-utils": "github:navio-dk/ts-utils#v{version}"
 	}
 }
 ```
@@ -20,7 +20,7 @@ Add this repository as a dependency in your `package.json`:
 // package.json
 {
 	"devDependencies": {
-		"@nomad-solutions/ts-utils": "github:Nomad-Solutions/ts-utils"
+		"@navio-dk/ts-utils": "github:navio-dk/ts-utils"
 	}
 }
 ```
@@ -29,8 +29,8 @@ Add this repository as a dependency in your `package.json`:
 After installation, you can import any utility with as such:
 
 ```typescript
-import { createShutdownHandler } from '@nomad-solutions/ts-utils';
-import type { MergeArrayOfObjects } from '@nomad-solutions/ts-utils';
+import { createShutdownHandler } from '@navio-dk/ts-utils';
+import type { MergeArrayOfObjects } from '@navio-dk/ts-utils';
 ```
 
 ## Utilities
@@ -43,7 +43,7 @@ When developing on this package, it might be beneficial to see how changes inter
 
 **TLDR**:
 1. Execute `bun link` from the root of this repository.
-2. Execute `bun link @nomad-solutions/errors` in the root of your application.
+2. Execute `bun link @navio-dk/errors` in the root of your application.
 
 This package should now be usable in your application (see [Usage section](#usage)), and updates to this package will be reflected instantly in your application (by the magic of symlinks).
 
