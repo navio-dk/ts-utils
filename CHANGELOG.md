@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.5.0](https://github.com/navio-dk/ts-utils/compare/v1.4.0...v1.5.0) (2025-10-13)
+
+
+### Features
+
+* update references from Nomad-Solutions to navio-dk in bun.lock ([fab2804](https://github.com/navio-dk/ts-utils/commit/fab280457857693a455e9c1fe2ed2a309fb3eb27))
+
 ## [1.4.0](https://github.com/navio-dk/ts-utils/compare/v1.3.0...v1.4.0) (2025-10-13)
 
 
