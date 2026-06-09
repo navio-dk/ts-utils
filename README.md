@@ -6,7 +6,7 @@ This library contains both utility functions and utility types.
 This package is published to **GitHub Packages**. The registry install (below) is recommended — `github:` refs are incompatible with `bun install --frozen-lockfile`. The `github:` method still works and is kept for repos still mid-migration.
 
 ### Registry (recommended)
-First, add a scoped registry + auth to your project's `.npmrc` (next to `package.json`):
+First, add a scoped registry + auth to your project's `.npmrc` (next to `package.json`). **Commit this file** — it holds only the `${NODE_AUTH_TOKEN}` placeholder, never the token itself, so it's safe to check in and is shared by your whole team and CI:
 
 ```ini
 # .npmrc
@@ -14,7 +14,12 @@ First, add a scoped registry + auth to your project's `.npmrc` (next to `package
 //npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
 ```
 
-- **Local:** export `NODE_AUTH_TOKEN` as a GitHub [personal access token **(classic)**](https://github.com/settings/tokens/new) with the `read:packages` scope. GitHub Packages does **not** support fine-grained tokens. If `navio-dk` enforces SAML SSO, click **Configure SSO** on the token and authorize it for the org.
+- **Local:** create a GitHub [personal access token **(classic)**](https://github.com/settings/tokens/new) with the `read:packages` scope (GitHub Packages does **not** support fine-grained tokens; if `navio-dk` enforces SAML SSO, click **Configure SSO** on the token and authorize it for the org), then export it in your shell — keep it in the env, never paste it into the committed `.npmrc`:
+
+  ```bash
+  export NODE_AUTH_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxx   # add to ~/.zshrc (or ~/.bashrc) to persist across sessions
+  ```
+
 - **CI (GitHub Actions):** set `NODE_AUTH_TOKEN` to `${{ secrets.GITHUB_TOKEN }}` and grant this package "Actions access" to the consuming repo (Package → Settings → Manage Actions access).
 
 Then add the dependency in your `package.json`:
