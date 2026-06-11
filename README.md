@@ -1,11 +1,44 @@
-# Nomad Solutions Typescript Utility Library
+# Navio Typescript Utility Library
 
 This library contains both utility functions and utility types.
 
 ## Install
-Add this repository as a dependency in your `package.json`:
+This package is published to **GitHub Packages**. The registry install (below) is recommended — `github:` refs are incompatible with `bun install --frozen-lockfile`. The `github:` method still works and is kept for repos still mid-migration.
 
-**Specific tag (recommended)**
+### Registry (recommended)
+First, add a scoped registry + auth to your project's `.npmrc` (next to `package.json`)
+
+```ini
+# .npmrc
+@navio-dk:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
+```
+
+- **Local:** create a GitHub [personal access token **(classic)**](https://github.com/settings/tokens/new) with the `read:packages` scope (GitHub Packages does **not** support fine-grained tokens; if `navio-dk` enforces SAML SSO, click **Configure SSO** on the token and authorize it for the org), then export it in your shell — keep it in the env, never paste it into the committed `.npmrc`:
+
+  ```bash
+  export NODE_AUTH_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxx   # add to ~/.zshrc (or ~/.bashrc) to persist across sessions
+  ```
+
+- **CI (GitHub Actions):** set `NODE_AUTH_TOKEN` to `${{ secrets.GITHUB_TOKEN }}` and grant this package "Actions access" to the consuming repo (Package → Settings → Manage Actions access).
+
+Then add the dependency in your `package.json`:
+
+```json5
+// package.json
+{
+	"devDependencies": {
+		"@navio-dk/ts-utils": "^{version}"
+	}
+}
+```
+
+### GitHub ref (legacy — being phased out)
+<!-- eslint-disable-next-line markdown/no-missing-label-refs -->
+> [!NOTE]
+> `github:` refs break `bun install --frozen-lockfile`. Prefer the registry install above; these remain for repos still on the old approach.
+
+**Specific tag**
 ```json5
 // package.json
 {

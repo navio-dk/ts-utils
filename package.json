@@ -1,7 +1,19 @@
 {
   "name": "@navio-dk/ts-utils",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "type": "module",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navio-dk/ts-utils.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "files": [
+    "index.ts",
+    "lib"
+  ],
   "scripts": {
     "prepare": "husky",
     "lint-staged": "lint-staged",
@@ -19,7 +31,7 @@
     "type-fest": "^4.30.0"
   },
   "devDependencies": {
-    "@navio-dk/dev-env": "github:navio-dk/dev-env#v3.1.0"
+    "@navio-dk/dev-env": "3.1.3"
   },
   "trustedDependencies": [
     "@navio-dk/dev-env",
