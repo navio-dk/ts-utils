@@ -1,4 +1,4 @@
-# Nomad Solutions Typescript Utility Library
+# Navio Typescript Utility Library
 
 This library contains both utility functions and utility types.
 
