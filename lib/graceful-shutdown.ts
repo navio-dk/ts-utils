@@ -32,11 +32,11 @@ export function createShutdownHandler(procs: ShutdownFunc[], timeout: number = S
 			consola.warn(`Did not shut down gracefully in ${ timeout / 1000 }s, forcefully shutting down`);
 				
 			process.exit(1);
-		}, SHUTDOWN_TIMEOUT);
+		}, timeout);
 			
 		consola.start('Shutting down gracefully...');
 	
-		const settled = await Promise.allSettled(procs);
+		const settled = await Promise.allSettled(procs.map(proc => proc()));
 	
 		const errors = getErrors(settled);
 	

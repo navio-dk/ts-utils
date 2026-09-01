@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.5.2](https://github.com/navio-dk/ts-utils/compare/v1.5.1...v1.5.2) (2026-08-13)
+
+
+### Bug Fixes
+
+* invoke shutdown handlers and honor custom timeout ([d182a64](https://github.com/navio-dk/ts-utils/commit/d182a644d364efe62f408f8d2998c216b4ae5589))
+* pin dev-env to minor release ([d2c247e](https://github.com/navio-dk/ts-utils/commit/d2c247e4925bdff07f574110ca206e8572d19427))
+
 ## [1.5.0](https://github.com/navio-dk/ts-utils/compare/v1.4.0...v1.5.0) (2025-10-13)
 
 
